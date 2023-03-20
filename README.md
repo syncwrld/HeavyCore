@@ -5,5 +5,19 @@
 <p id="description">Uma API completa pros plugins da minha Rede (redeheavy.com)</p>
 
 <h2>🛠️ Como utilizar</h2>
+
 <p>1. Baixe a última versão da JAR [aqui](https://github.com/syncwrld/HeavyCore/releases)</p>
+
 <p>2. Adicione ela como dependência no seu `pom.xml` utilizando o código abaixo</p>
+
+```
+        <dependency>
+            <groupId>com.redeheavy.core</groupId>
+            <artifactId>heavy-api</artifactId>
+            <scope>system</scope>
+            <systemPath>seuDiretorio/HeavyCore.jar</systemPath>
+            <version>1.0.1</version>
+        </dependency>     
+```
+
+<p>3. Agora é só usar!</p>
