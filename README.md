@@ -21,3 +21,9 @@
 ```
 
 <p>3. Agora é só usar!</p>
+
+<h2>⚙ Avisos</h2>
+
+<p>1. Nenhum sistema desse Core está pronto ainda, ele está em desenvolvimento completo e não é recomendado usá-lo em ambiente de produção ainda.</p>
+<p>2. A src não é atualizada em tempo real por questões de segurança, então só terá update quando os sistemas estiverem 100% estáveis</p>
+<p>3. Não venda ou revenda esse plugin sem minha autorização.</p>
