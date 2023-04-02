@@ -1,10 +1,12 @@
 package com.redeheavy.heavycore.platform.bukkit.systems;
 
+import com.redeheavy.heavycore.commons.objects.HeavyPlugin;
 import lombok.NonNull;
 import lombok.val;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class BukkitEssentials {
 
@@ -26,5 +28,16 @@ public class BukkitEssentials {
         if (!configuration.exists()) instantiator.saveResource("config.yml", false);
     }
 
+    public void downloadDependency(HeavyPlugin heavyPlugin, String dependencyName, String URL, String output_name) {
+        AutoDownloadDependency.download(heavyPlugin, dependencyName, URL, output_name);
+    }
+
+    public void doCustomDirectory(String path) {
+        CustomFileAndDirectory.doCustomDirectory(path);
+    }
+
+    public void saveToDirectory(String pathName, String resource, Plugin maker, ClassLoader classloader) throws FileNotFoundException {
+        CustomFileAndDirectory.saveFileToCustomPath(pathName, resource, maker, classloader);
+    }
 
 }

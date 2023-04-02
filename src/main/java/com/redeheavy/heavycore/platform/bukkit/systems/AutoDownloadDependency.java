@@ -3,6 +3,7 @@ package com.redeheavy.heavycore.platform.bukkit.systems;
 import com.redeheavy.heavycore.commons.enums.Level;
 import com.redeheavy.heavycore.commons.objects.HeavyPlugin;
 import com.redeheavy.heavycore.platform.bukkit.utils.BukkitLogger;
+import lombok.val;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,9 +20,12 @@ public class AutoDownloadDependency {
 
         BukkitLogger.send(Level.NORMAL, "Baixando dependência necessária: " + dependencyName + ". (0%)");
 
+        val r = System.getProperty("user.dir");
+        val s = File.separator;
+
         try {
             InputStream in = new URL(URL).openStream();
-            Path path = new File("/home/container/plugins/", outputName).toPath();
+            Path path = new File(r + s + "plugins" + s, outputName).toPath();
             Files.copy(in, path, StandardCopyOption.REPLACE_EXISTING);
 
             BukkitLogger.send(Level.SUCCESS, "Dependência instalada! (" + dependencyName + ")");

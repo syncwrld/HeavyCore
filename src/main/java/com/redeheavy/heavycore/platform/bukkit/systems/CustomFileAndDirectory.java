@@ -11,13 +11,13 @@ import java.nio.file.Files;
 
 public class CustomFileAndDirectory {
 
-    protected static void doCustomDirectory(@NonNull String name) {
+    public static void doCustomDirectory(@NonNull String name) {
         val root = System.getProperty("user.dir");
         File file = new File(root + File.separator + "plugins" + File.separator + name);
         if (!file.exists()) file.mkdirs();
     }
 
-    protected static void saveFileToCustomPath(@NonNull String pathName, @NonNull String resource, @NonNull Plugin maker, @NonNull ClassLoader classLoader) throws FileNotFoundException {
+    public static void saveFileToCustomPath(@NonNull String pathName, @NonNull String resource, @NonNull Plugin maker, @NonNull ClassLoader classLoader) throws FileNotFoundException {
 
         val stream = classLoader.getResourceAsStream(resource);
 
