@@ -1,0 +1,1 @@
+{"id":"heavycore","name":"HeavyCore","version":"1.0-SNAPSHOT","description":"Dependência pros plugin da Heavy","url":"https://github.com/syncwrld","authors":["syncwrld","AlbanoHouse"],"dependencies":[],"main":"com.redeheavy.heavycore.loaders.VelocityLoader"}
