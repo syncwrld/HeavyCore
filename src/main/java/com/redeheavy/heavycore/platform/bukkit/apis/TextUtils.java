@@ -1,6 +1,8 @@
 package com.redeheavy.heavycore.platform.bukkit.apis;
 
 
+import org.bukkit.ChatColor;
+
 public class TextUtils {
 
     private final static int CENTER_PX = 154;
@@ -38,6 +40,10 @@ public class TextUtils {
 
         return sb.toString() + message;
 
+    }
+
+    public static String translate(String text) {
+        return ChatColor.translateAlternateColorCodes('&', text);
     }
 
 }

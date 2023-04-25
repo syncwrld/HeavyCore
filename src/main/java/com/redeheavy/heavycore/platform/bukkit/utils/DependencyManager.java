@@ -1,9 +1,10 @@
-package com.redeheavy.heavycore.platform.bukkit.systems;
+package com.redeheavy.heavycore.platform.bukkit.utils;
 
 import com.redeheavy.heavycore.commons.logging.LoggerFactory;
 import com.redeheavy.heavycore.commons.objects.HeavyPlugin;
 import com.redeheavy.heavycore.loaders.BukkitLoader;
 import lombok.val;
+import org.bukkit.Bukkit;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,12 +14,17 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
-public class AutoDownloadDependency {
+public class DependencyManager {
 
     static final LoggerFactory logger = BukkitLoader.getBuildLogger();
 
-    public static void download(HeavyPlugin heavyPlugin, String dependencyName, String URL, String outputName) {
-        logger.normal("[" + heavyPlugin.getPluginName() + "]" + "Baixando dependência necessária: " + dependencyName + ". (0%)");
+    public boolean isPresent(String dependencyName) {
+        val plugin = Bukkit.getPluginManager().getPlugin(dependencyName);
+        return plugin != null;
+    }
+
+    public void download(HeavyPlugin heavyPlugin, String dependencyName, String URL, String outputName) {
+        logger.normal("Baixando dependência necessária: " + dependencyName + ". (0%)");
 
         val r = System.getProperty("user.dir");
         val s = File.separator;
