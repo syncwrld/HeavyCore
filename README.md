@@ -8,7 +8,7 @@
 
 <p>1. Baixe a última versão da JAR em https://github.com/syncwrld/HeavyCore/releases</p>
 
-<p>2. Adicione ela como dependência no seu `pom.xml` utilizando o código abaixo</p>
+<p>2. Adicione ela como dependência no seu pom.xml utilizando o código abaixo</p>
 
 ```
         <dependency>
