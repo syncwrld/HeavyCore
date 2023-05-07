@@ -1,0 +1,6 @@
+name: HeavyCore
+version: '1.0'
+main: com.redeheavy.heavycore.loaders.BukkitLoader
+author: sync
+website: github.com/syncwrld
+description: core pros plugins da heavy (redeheavy.com)

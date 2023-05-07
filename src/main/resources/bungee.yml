@@ -1,0 +1,4 @@
+name: HeavyCore
+main: com.redeheavy.heavycore.loaders.BungeeLoader
+version: 1.0
+author: syncwrld, synczinbr
