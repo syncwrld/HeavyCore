@@ -6,7 +6,7 @@
 
 <h2>🛠️ Como utilizar</h2>
 
-1. Adicione o texto abaixo em `<repositories>`
+1. Adicione o texto abaixo em `<repositories>` na sua `pom.xml`
 ```xml
 <repository>
 	<id>jitpack.io</id>
@@ -23,6 +23,9 @@
 ```
 
 <p>3. Agora é só usar!</p>
+
+<h2>📕 Wiki</h2>
+[Clique aqui para ver a Wiki e como utilizar o Core e suas funções](https://github.com/syncwrld/HeavyCore/wiki)
 
 <h2>⚙ Avisos</h2>
 
