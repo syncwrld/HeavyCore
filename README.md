@@ -25,7 +25,7 @@
 <p>3. Agora é só usar!</p>
 
 <h2>📕 Wiki</h2>
-<p href="https://github.com/syncwrld/HeavyCore/wiki">Clique aqui para ver a Wiki e como utilizar o Core e suas funções</p>
+<p><a href="https://github.com/syncwrld/HeavyCore/wiki">Clique aqui para ver a Wiki e como utilizar o Core e suas funções</a></p>
 
 <h2>⚙ Avisos</h2>
 
