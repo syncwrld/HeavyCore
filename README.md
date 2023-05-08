@@ -6,18 +6,20 @@
 
 <h2>🛠️ Como utilizar</h2>
 
-<p>1. Baixe a última versão da JAR em https://github.com/syncwrld/HeavyCore/releases</p>
-
-<p>2. Adicione ela como dependência no seu pom.xml utilizando o código abaixo</p>
-
+1. Adicione o texto abaixo em `<repositories>`
+```xml
+<repository>
+	<id>jitpack.io</id>
+	<url>https://jitpack.io</url>
+</repository>
 ```
-        <dependency>
-            <groupId>com.redeheavy.core</groupId>
-            <artifactId>heavy-api</artifactId>
-            <scope>system</scope>
-            <systemPath>seuDiretorio/HeavyCore.jar</systemPath>
-            <version>1.0.1</version>
-        </dependency>     
+2. Agora adicione o texto abaixo em `<dependencies>`
+```xml
+<dependency>
+	<groupId>com.github.syncwrld</groupId>
+	<artifactId>HeavyCore</artifactId>
+        <version>VERSÃO</version>
+</dependency>
 ```
 
 <p>3. Agora é só usar!</p>
