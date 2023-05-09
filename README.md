@@ -4,6 +4,9 @@
 
 <p id="description">Uma API completa pros plugins da minha Rede (redeheavy.com)</p>
 
+<h2>📕 Wiki</h2>
+<p><a href="https://github.com/syncwrld/HeavyCore/wiki">Clique aqui para ver a Wiki e como utilizar o Core e suas funções</a></p>
+
 <h2>🛠️ Como utilizar</h2>
 
 1. Adicione o texto abaixo em `<repositories>` na sua `pom.xml`
@@ -23,9 +26,6 @@
 ```
 
 <p>3. Agora é só usar!</p>
-
-<h2>📕 Wiki</h2>
-<p><a href="https://github.com/syncwrld/HeavyCore/wiki">Clique aqui para ver a Wiki e como utilizar o Core e suas funções</a></p>
 
 <h2>⚙ Avisos</h2>
 
