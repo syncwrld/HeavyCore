@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/syncwrld/HeavyCore/image?description=1&amp;font=Inter&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;stargazers=1&amp;theme=Dark" alt="project-image"></p>
 
-<p id="description">Uma API completa pros plugins da minha Rede (redeheavy.com)</p>
+<p id="description">Uma API completa pra plugins Spigot, Bungeecord e Velocity.</p>
 
 <h2>📕 Wiki</h2>
 <p><a href="https://github.com/syncwrld/HeavyCore/wiki">Clique aqui para ver a Wiki e como utilizar o Core e suas funções</a></p>
