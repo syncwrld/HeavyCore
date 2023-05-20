@@ -1,12 +1,12 @@
 package com.redeheavy.heavycore.commons.registry;
 
+import com.redeheavy.heavycore.commons.Basement;
 import com.redeheavy.heavycore.commons.logging.LoggerFactory;
 import com.redeheavy.heavycore.commons.objects.HeavyPlugin;
-import com.redeheavy.heavycore.loaders.BukkitLoader;
 
 public class HeavyRegistry {
 
-    static final LoggerFactory logger = BukkitLoader.getBuildLogger();
+    static final LoggerFactory logger = Basement.getLogger();
     private final HeavyPlugin heavyPlugin;
 
     public HeavyRegistry(HeavyPlugin heavyPlugin) {

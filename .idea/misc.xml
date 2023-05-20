@@ -7,6 +7,9 @@
       <item index="2" class="java.lang.String" itemvalue="com.velocitypowered.api.event.Subscribe" />
       <item index="3" class="java.lang.String" itemvalue="com.velocitypowered.api.plugin.Plugin" />
     </list>
+    <writeAnnotations>
+      <writeAnnotation name="lombok.Getter" />
+    </writeAnnotations>
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

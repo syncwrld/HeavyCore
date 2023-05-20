@@ -1,13 +1,13 @@
 package com.redeheavy.heavycore.commons.logging.loggers;
 
-import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
+import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
 
 public class BungeecordLogger {
 
-    static final CommandSender log = BungeeCord.getInstance().getConsole();
+    static final CommandSender log = ProxyServer.getInstance().getConsole();
     static String loggerPrefix;
 
     public BungeecordLogger(String prefix) {

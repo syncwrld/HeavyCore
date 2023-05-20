@@ -3,8 +3,8 @@ package com.redeheavy.heavycore.platform.bungeecord.utils;
 import com.redeheavy.heavycore.commons.enums.Level;
 import lombok.Getter;
 import lombok.Setter;
-import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
 
 public class BungeeLogger {
@@ -18,7 +18,7 @@ public class BungeeLogger {
     }
 
     private static void sendMessage(String msg) {
-        BungeeCord.getInstance().getConsole().sendMessage(new TextComponent(translate(msg)));
+        ProxyServer.getInstance().getConsole().sendMessage(new TextComponent(translate(msg)));
     }
 
     public static void send(Level LogLevel, String message) {

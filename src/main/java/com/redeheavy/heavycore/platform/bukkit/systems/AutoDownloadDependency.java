@@ -2,7 +2,7 @@ package com.redeheavy.heavycore.platform.bukkit.systems;
 
 import com.redeheavy.heavycore.commons.logging.LoggerFactory;
 import com.redeheavy.heavycore.commons.objects.HeavyPlugin;
-import com.redeheavy.heavycore.loaders.BukkitLoader;
+import com.redeheavy.heavycore.platform.bukkit.BukkitLoader;
 import lombok.val;
 
 import java.io.File;
