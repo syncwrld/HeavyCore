@@ -11,7 +11,7 @@ import java.util.List;
 public class HeavyPlugin  {
 
     private String pluginName;
-    private String rootPackage;
+    private String mainDirectory;
     private String pluginVersion;
     private String author;
     private List<String> authors;
@@ -19,7 +19,7 @@ public class HeavyPlugin  {
 
     public HeavyPlugin(@NonNull String pluginName, @NonNull String mainDirectory, @NonNull PlatformType platform, String pluginVersion, List<String> authors) {
         this.pluginName = pluginName;
-        this.rootPackage = rootPackage;
+        this.mainDirectory = mainDirectory;
         this.pluginVersion = pluginVersion;
         this.platformType = platform;
         this.authors = authors;
@@ -29,7 +29,7 @@ public class HeavyPlugin  {
 
     public HeavyPlugin(@NonNull String pluginName, @NonNull String mainDirectory, @NonNull PlatformType platform, String pluginVersion, String author) {
         this.pluginName = pluginName;
-        this.rootPackage = rootPackage;
+        this.mainDirectory = mainDirectory;
         this.pluginVersion = pluginVersion;
         this.platformType = platform;
         this.author = author;
