@@ -1,6 +1,7 @@
 package com.redeheavy.heavycore.platform.bukkit;
 
 import com.redeheavy.heavycore.commons.logging.LoggerFactory;
+import com.redeheavy.heavycore.commons.superupdater.SuperUpdater;
 import com.redeheavy.heavycore.commons.updater.UpdateChecker;
 import lombok.Getter;
 import lombok.SneakyThrows;
@@ -41,9 +42,14 @@ public class BukkitLoader extends JavaPlugin {
         plugin = this;
 
         checkSpigot();
+        loadModules();
 
         updateChecker = new UpdateChecker(plugin, "syncwrld", "HeavyCore");
         update();
+    }
+
+    void loadModules() {
+        SuperUpdater.startUpdater();
     }
 
     void update() {

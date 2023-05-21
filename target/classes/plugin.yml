@@ -1,5 +1,5 @@
 name: HeavyCore
-version: '1.0'
+version: '1.0.1'
 main: com.redeheavy.heavycore.platform.bukkit.BukkitLoader
 author: sync
 website: github.com/syncwrld
