@@ -17,7 +17,7 @@ public class HeavyPlugin  {
     private List<String> authors;
     private PlatformType platformType;
 
-    public HeavyPlugin(@NonNull String pluginName, @NonNull String rootPackage, @NonNull PlatformType platform, String pluginVersion, List<String> authors) {
+    public HeavyPlugin(@NonNull String pluginName, @NonNull String mainDirectory, @NonNull PlatformType platform, String pluginVersion, List<String> authors) {
         this.pluginName = pluginName;
         this.rootPackage = rootPackage;
         this.pluginVersion = pluginVersion;
@@ -27,7 +27,7 @@ public class HeavyPlugin  {
         new HeavyRegistry(this);
     }
 
-    public HeavyPlugin(@NonNull String pluginName, @NonNull String rootPackage, @NonNull PlatformType platform, String pluginVersion, String author) {
+    public HeavyPlugin(@NonNull String pluginName, @NonNull String mainDirectory, @NonNull PlatformType platform, String pluginVersion, String author) {
         this.pluginName = pluginName;
         this.rootPackage = rootPackage;
         this.pluginVersion = pluginVersion;
