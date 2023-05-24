@@ -18,6 +18,7 @@ com\redeheavy\heavycore\platform\bukkit\apis\TextUtils.class
 com\redeheavy\heavycore\platform\bukkit\utils\BukkitProxyUtils.class
 com\redeheavy\heavycore\platform\bungeecord\systems\BungeeEssentials.class
 com\redeheavy\heavycore\commons\database\objects\TableContent.class
+com\redeheavy\heavycore\platform\bukkit\monitor\PluginMonitor.class
 com\redeheavy\heavycore\exceptions\InvalidResponseQuery.class
 com\redeheavy\heavycore\commons\objects\HeavyPlugin.class
 com\un2dies\util\DiscordWebhook$1.class

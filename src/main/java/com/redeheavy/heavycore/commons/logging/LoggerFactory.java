@@ -4,18 +4,23 @@ import com.redeheavy.heavycore.commons.enums.LogTarget;
 import com.redeheavy.heavycore.commons.logging.loggers.BukkitLogger;
 import com.redeheavy.heavycore.commons.logging.loggers.BungeecordLogger;
 import com.redeheavy.heavycore.commons.logging.loggers.VelocityLogger;
+import com.redeheavy.heavycore.commons.objects.HeavyPlugin;
 import lombok.NonNull;
 import org.slf4j.Logger;
+
+import java.util.LinkedHashMap;
 
 public class LoggerFactory {
 
     static final Logger logger = org.slf4j.LoggerFactory.getLogger(LoggerFactory.class);
+    static final LinkedHashMap<HeavyPlugin, String> map = new LinkedHashMap<>();
     static LogTarget logTarget;
-    static String logPrefix;
+    static HeavyPlugin plugin;
 
-    public LoggerFactory(@NonNull String prefix) {
+    public LoggerFactory(@NonNull HeavyPlugin heavyPlugin, @NonNull String prefix) {
+        map.put(heavyPlugin, prefix);
 
-        logPrefix = prefix;
+        plugin = heavyPlugin;
 
         try {
             Class.forName("org.bukkit.plugin.java.JavaPlugin");
@@ -43,108 +48,147 @@ public class LoggerFactory {
     }
 
     public void debug(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).debug(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).debug(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).debug(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).debug(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).debug(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+                break;
         }
     }
 
     public void info(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).info(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).info(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).info(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).info(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).info(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
     public void common(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).common(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).common(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).common(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).common(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).common(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
     public void normal(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).normal(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).normal(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).normal(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).normal(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).normal(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
     public void warn(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).warn(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).warn(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).warn(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).warn(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).warn(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
     public void error(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).error(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).error(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).error(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).error(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).error(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
     public void severe(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).severe(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).severe(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).severe(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).severe(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).severe(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
     public void success(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).success(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).success(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).success(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).success(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).success(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
     public void failed(String text) {
-        if (logTarget == LogTarget.BUKKIT) {
-            new BukkitLogger(logPrefix).failed(text);
-        } else if (logTarget == LogTarget.BUNGEECORD) {
-            new BungeecordLogger(logPrefix).failed(text);
-        } else if (logTarget == LogTarget.VELOCITY) {
-            new VelocityLogger(logPrefix).info(text);
-        } else {
-            logger.error("Wasn't possible to send a message in console because this platform unsupported.");
+        switch (logTarget) {
+            case BUKKIT:
+                new BukkitLogger(map.get(plugin)).failed(text);
+                break;
+            case BUNGEECORD:
+                new BungeecordLogger(map.get(plugin)).failed(text);
+                break;
+            case VELOCITY:
+                new VelocityLogger(map.get(plugin)).failed(text);
+                break;
+            default:
+                logger.error("Wasn't possible to send a message in console because this platform unsupported.");
         }
     }
 
