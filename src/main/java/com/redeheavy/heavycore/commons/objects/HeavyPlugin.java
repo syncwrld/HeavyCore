@@ -8,7 +8,7 @@ import lombok.NonNull;
 import java.util.List;
 
 @Data
-public class HeavyPlugin  {
+public class HeavyPlugin {
 
     private String pluginName;
     private String mainDirectory;
@@ -24,7 +24,9 @@ public class HeavyPlugin  {
         this.platformType = platform;
         this.authors = authors;
 
-        new HeavyRegistry(this);
+        if (!pluginName.equalsIgnoreCase("HeavyCore")) {
+            new HeavyRegistry(this);
+        }
     }
 
     public HeavyPlugin(@NonNull String pluginName, @NonNull String mainDirectory, @NonNull PlatformType platform, String pluginVersion, String author) {
@@ -34,7 +36,9 @@ public class HeavyPlugin  {
         this.platformType = platform;
         this.author = author;
 
-        new HeavyRegistry(this);
+        if (!pluginName.equalsIgnoreCase("HeavyCore")) {
+            new HeavyRegistry(this);
+        }
     }
 
 }

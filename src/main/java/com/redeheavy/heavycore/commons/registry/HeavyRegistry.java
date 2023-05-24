@@ -12,9 +12,11 @@ public class HeavyRegistry extends RegistryMap {
     public HeavyRegistry(HeavyPlugin heavyPlugin) {
         this.heavyPlugin = heavyPlugin;
 
+        String author = heavyPlugin.getAuthors() == null ? heavyPlugin.getAuthor() : (heavyPlugin.getAuthors()).toString();
+
         logger.success("Registrado plugin: [" +
                 heavyPlugin.getPluginName() + "] - versão " + heavyPlugin.getPluginVersion()
-                + " by " + heavyPlugin.getAuthors()
+                + " by " + author
         );
 
         addValid(heavyPlugin);

@@ -1,6 +1,8 @@
 package com.redeheavy.heavycore.platform.bukkit;
 
+import com.redeheavy.heavycore.commons.enums.PlatformType;
 import com.redeheavy.heavycore.commons.logging.LoggerFactory;
+import com.redeheavy.heavycore.commons.objects.HeavyPlugin;
 import com.redeheavy.heavycore.commons.superupdater.SuperUpdater;
 import com.redeheavy.heavycore.commons.updater.UpdateChecker;
 import com.redeheavy.heavycore.platform.bukkit.monitor.PluginMonitor;
@@ -15,7 +17,7 @@ import static org.bukkit.Bukkit.shutdown;
 public class BukkitLoader extends JavaPlugin {
 
     @Getter
-    static final LoggerFactory buildLogger = new LoggerFactory("&6[HeavyCore]");
+    static LoggerFactory buildLogger;
     @Getter
     public static Plugin plugin;
     @Getter
@@ -45,6 +47,9 @@ public class BukkitLoader extends JavaPlugin {
 
     public void onEnable() {
         plugin = this;
+
+        HeavyPlugin needed = new HeavyPlugin("HeavyCore", "?", PlatformType.BUKKIT, "?", "?");
+        buildLogger = new LoggerFactory(needed, "&6[HeavyCore]");
 
         checkSpigot();
         register();

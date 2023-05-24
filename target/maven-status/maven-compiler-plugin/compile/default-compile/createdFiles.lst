@@ -41,6 +41,7 @@ com\redeheavy\heavycore\commons\utils\PlatformUtils.class
 com\redeheavy\heavycore\platform\bukkit\apis\LocationSerializer.class
 com\redeheavy\heavycore\platform\bukkit\apis\ItemComposer$1.class
 com\redeheavy\heavycore\commons\enums\Level.class
+com\redeheavy\heavycore\commons\logging\LoggerFactory$1.class
 com\redeheavy\heavycore\commons\superupdater\scanner\RegisteredPluginFileScanner.class
 com\redeheavy\heavycore\platform\bukkit\systems\CustomFileAndDirectory.class
 com\redeheavy\heavycore\commons\registry\HeavyRegistry.class
