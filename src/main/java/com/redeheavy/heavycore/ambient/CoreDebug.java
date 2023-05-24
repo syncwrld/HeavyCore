@@ -11,7 +11,7 @@ public class CoreDebug {
     }
 
     static void execute() {
-        MySQLConnector connector = new MySQLConnector("mysql.meteorcloud.com.br", "3306", "s192_asdasdasda", "u192_KfmQxZA0hX", "UiiWA4U.m46g2t^aAx+6RZMs");
+        MySQLConnector connector = new MySQLConnector("mysql.meteorcloud.com.br", "3306", "s01_testes", "u192_KfmQxZA0hX", "UiiWA4U.m46g2t^aAx+6RZMs");
         connector.connect();
 
 
