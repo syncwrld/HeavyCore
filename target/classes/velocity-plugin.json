@@ -1,1 +1,0 @@
-{"id":"heavycore","name":"HeavyCore","version":"v1.1","description":"Um Core/API completo para a maioria das plataformas de servidores","url":"https://github.com/syncwrld/HeavyCore","authors":["syncwrld","synczinbr"],"dependencies":[],"main":"com.redeheavy.heavycore.platform.velocity.VelocityLoader"}
