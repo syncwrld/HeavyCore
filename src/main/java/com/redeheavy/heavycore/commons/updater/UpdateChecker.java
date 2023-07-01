@@ -28,12 +28,25 @@ public class UpdateChecker {
     private final String repositoryName;
 
     private GithubRelease lastRelease;
+    private String githubToken = null;
+
+    public void setToken(String yourToken) {
+        githubToken = yourToken;
+    }
 
     public void check() {
-        ConnectionResolver connectionResolver = new ConnectionResolver(GITHUB_API_LINK
-                .replace("{user}", githubUsername)
-                .replace("{pluginName}", repositoryName)
-        );
+        ConnectionResolver connectionResolver;
+        if (githubToken != null) {
+            connectionResolver = new ConnectionResolver(GITHUB_API_LINK
+                    .replace("{user}", githubUsername)
+                    .replace("{pluginName}", repositoryName), githubToken);
+        }
+        else {
+            connectionResolver = new ConnectionResolver(GITHUB_API_LINK
+                    .replace("{user}", githubUsername)
+                    .replace("{pluginName}", repositoryName)
+            );
+        }
 
         connectionResolver.connect();
 
