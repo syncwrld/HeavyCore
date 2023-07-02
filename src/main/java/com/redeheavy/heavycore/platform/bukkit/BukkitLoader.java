@@ -18,8 +18,10 @@ public class BukkitLoader extends JavaPlugin {
 
     @Getter
     static LoggerFactory buildLogger;
+
     @Getter
     public static Plugin plugin;
+
     @Getter
     static UpdateChecker updateChecker;
 
@@ -39,10 +41,6 @@ public class BukkitLoader extends JavaPlugin {
             Thread.sleep(9000);
             shutdown();
         }
-    }
-
-    public static void loadModules() {
-        SuperUpdater.startUpdater();
     }
 
     public void onEnable() {

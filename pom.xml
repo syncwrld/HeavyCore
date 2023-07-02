@@ -38,6 +38,52 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <relocations>
+                                <relocation>
+                                    <pattern>ch.qos.logback</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.logback</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.cryptomorin.xseries</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.xseries</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.google.gson</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.gson</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.mongodb</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.mongodb</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>de.slikey.effectlib</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.effectlib</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>de.slikey.exp4j</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.exp4j</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.bson</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.bson</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.json</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.json</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.slf4j</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.slf4j</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.yaml</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.yaml</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>xyz.upperlevel.spigot.book</pattern>
+                                    <shadedPattern>com.redeheavy.heavycore.libs.book-api</shadedPattern>
+                                </relocation>
+                            </relocations>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                         </configuration>
                     </execution>
@@ -169,6 +215,17 @@
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
             <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.elmakers.mine.bukkit</groupId>
+            <artifactId>EffectLib</artifactId>
+            <version>9.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.11</version>
         </dependency>
     </dependencies>
 </project>
