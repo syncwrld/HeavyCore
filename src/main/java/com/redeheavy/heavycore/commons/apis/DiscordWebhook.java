@@ -1,4 +1,4 @@
-package com.un2dies.util;
+package com.redeheavy.heavycore.commons.apis;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.awt.*;

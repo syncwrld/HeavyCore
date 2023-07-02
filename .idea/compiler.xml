@@ -10,8 +10,5 @@
         <module name="HeavyCore" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="HeavyCore" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
